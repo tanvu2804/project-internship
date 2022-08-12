@@ -1,8 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:project_internship/constants/app_images.dart';
-import 'package:project_internship/constants/app_string.dart';
+import 'package:project_internship/constant/app_images.dart';
+
+import '../../../constant/app_string.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -12,15 +13,15 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  bool isCheck =true;
+  bool isCheck = true;
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints.expand(),
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/background/bg_sign_up.png"),
-              fit: BoxFit.cover)),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(AppImages.bg_sign_up), fit: BoxFit.cover),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent.withOpacity(0.0),
         appBar: AppBar(
@@ -36,96 +37,101 @@ class _SignUpState extends State<SignUp> {
             padding: EdgeInsets.only(left: 10.0),
             icon: Icon(Icons.chevron_left),
             iconSize: 40.0,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
         ),
         body: SafeArea(
           child: SingleChildScrollView(
-              padding: EdgeInsets.only(left: 8),
-              child: Column(
-                  children: [
-                  const Logo(),
-              Row(
-                children: <Widget>[
-                  Image.asset(
-                    AppImages.Phone,
-                    height: 35,
-                    width: 35,
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 20.0)),
-                  Expanded(child: const PhoneInput()),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
-              Row(
-                children: <Widget>[
-                  Image.asset(
-                    AppImages.Envelope,
-                    height: 35,
-                    width: 35,
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 20.0)),
-                  Expanded(child: const EmailAddress()),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
-              Row(
-                children: <Widget>[
-                  Image.asset(
-                    AppImages.Unlock,
-                    height: 35,
-                    width: 35,
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 20.0)),
-                  Expanded(child: Password()),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
-              Row(
-                children: <Widget>[
-                  Image.asset(
-                    AppImages.Unlock,
-                    height: 35,
-                    width: 35,
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 20.0)),
-                  Expanded(child: ConfirmPassword()),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(top: 10.0)),
-              Image.asset(
-                AppImages.Privacy,
-                width: 300.0,
-              ),
-              Row(
-                children: <Widget>[
-                  IconButton(onPressed: () {
-                    setState(() {
-                      isCheck = !isCheck;
-                    });
-                  },
-                      icon: isCheck?Icon(Icons.radio_button_off_outlined):Icon(Icons.radio_button_checked_outlined, color: Colors.white)),
-                  const Privacy(),
-                ],
-              ),
-              Container(
-                width: 300,
-                child: FlatButton(
-                onPressed: () {},
-                  child: Text('SIGN UP',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                  color: Color(0xff7123D9),
-                  textColor: Colors.white,
-                ),
-              )
+            padding: EdgeInsets.only(left: 8),
+            child: Column(
+              children: [
+                const Logo(),
+                Row(
+                  children: <Widget>[
+                    Image.asset(
+                      AppImages.ic_phone,
+                      height: 35,
+                      width: 35,
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 20.0)),
+                    Expanded(child: const PhoneInput()),
                   ],
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
+                Row(
+                  children: <Widget>[
+                    Image.asset(
+                      AppImages.ic_email,
+                      height: 35,
+                      width: 35,
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 20.0)),
+                    Expanded(child: const EmailAddress()),
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
+                Row(
+                  children: <Widget>[
+                    Image.asset(
+                      AppImages.ic_password,
+                      height: 35,
+                      width: 35,
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 20.0)),
+                    Expanded(child: Password()),
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 5.0, top: 5.0)),
+                Row(
+                  children: <Widget>[
+                    Image.asset(
+                      AppImages.ic_password,
+                      height: 35,
+                      width: 35,
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 20.0)),
+                    Expanded(child: ConfirmPassword()),
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(top: 10.0)),
+                Image.asset(
+                  AppImages.privacy,
+                  width: 300.0,
+                ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                        onPressed: () {
+                          setState(() {
+                            isCheck = !isCheck;
+                          });
+                        },
+                        icon: isCheck
+                            ? Icon(Icons.radio_button_off_outlined)
+                            : Icon(Icons.radio_button_checked_outlined,
+                                color: Colors.white)),
+                    const Privacy(),
+                  ],
+                ),
+                Container(
+                  width: 300,
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'SIGN UP',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    color: Color(0xff7123D9),
+                    textColor: Colors.white,
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
-
-
-    ),
     );
   }
 }
@@ -146,7 +152,7 @@ class _LogoState extends State<Logo> {
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Image(
-          image: AssetImage("assets/images/logo.png"),
+          image: AssetImage(AppImages.logo_nuskin),
           height: 155.0,
           width: 155.0,
         )

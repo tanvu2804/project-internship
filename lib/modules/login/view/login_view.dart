@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_internship/constant/app_colors.dart';
 import 'package:project_internship/constant/app_images.dart';
 import 'package:project_internship/constant/app_string.dart';
+import 'package:project_internship/routes/app_routes.dart';
 
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
@@ -16,34 +17,36 @@ class _LoginState extends State<Login> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/backgrounds/bg_login.png'),
+          image: AssetImage(AppImages.bg_login),
           fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.only(top: height * 4 / 31),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Image.asset(
-                  AppImages.bgLogin,
-                  fit: BoxFit.cover,
-                  width: width / 2.25,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    right: width * 39 / 640,
-                    left: width * 39 / 640,
-                    top: height * 37 / 1136,
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: EdgeInsets.only(top: height * 4 / 31),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    AppImages.logo_nuskin,
+                    fit: BoxFit.cover,
+                    width: width / 2.25,
                   ),
-                  child: _formValidation(),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsets.only(
+                      right: width * 39 / 640,
+                      left: width * 39 / 640,
+                      top: height * 37 / 1136,
+                    ),
+                    child: _formValidation(),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -60,7 +63,9 @@ class _LoginState extends State<Login> {
                     style: TextButton.styleFrom(
                       primary: AppColors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(Routes.SIGN_UP);
+                    },
                     child: Text(
                       LoginString.SIGNUP_HERE,
                       style: TextStyle(
@@ -257,7 +262,7 @@ class _formValidationState extends State<_formValidation> {
           Row(
             children: <Widget>[
               Image.asset(
-                AppImages.iconEmail,
+                AppImages.ic_email,
                 height: height * 55 / 1136,
                 width: width * 20 / 640,
               ),
@@ -312,7 +317,7 @@ class _formValidationState extends State<_formValidation> {
           Row(
             children: <Widget>[
               Image.asset(
-                AppImages.iconPassword,
+                AppImages.ic_password,
                 height: height * 55 / 1136,
                 width: width * 20 / 640,
               ),
