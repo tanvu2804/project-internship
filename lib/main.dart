@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/modules/sign_up/view/sign_up_view.dart';
 
+import 'modules/login/view/login_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,8 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.fallback(),
-      home: const SignUp(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Login(),
     );
   }
 }
