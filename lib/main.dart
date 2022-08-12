@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/modules/sign_up/view/sign_up_view.dart';
 
 import 'modules/login/view/login_view.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
