@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_internship/constant/app_colors.dart';
-import 'package:project_internship/constant/app_images.dart';
-import 'package:project_internship/constant/app_string.dart';
+import 'package:project_internship/constants/app_colors.dart';
+import 'package:project_internship/constants/app_images.dart';
+import 'package:project_internship/constants/app_string.dart';
 import 'package:project_internship/routes/app_routes.dart';
 
 class Login extends StatefulWidget {

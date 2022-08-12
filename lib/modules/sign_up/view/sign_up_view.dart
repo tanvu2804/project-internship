@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:project_internship/constant/app_images.dart';
+import 'package:project_internship/constants/app_images.dart';
 
-import '../../../constant/app_string.dart';
+import '../../../constants/app_string.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
