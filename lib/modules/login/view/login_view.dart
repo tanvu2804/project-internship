@@ -336,7 +336,7 @@ class _formValidationState extends State<_formValidation> {
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
                       color: AppColors.white,
-                      iconSize: 25,
+                      iconSize: 30,
                       icon: Icon(
                         _isObscure ? Icons.visibility : Icons.visibility_off,
                       ),
