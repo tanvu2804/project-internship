@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/modules/Technical%20assistance/view/Technical_assistance_view.dart';
 import 'package:project_internship/routes/app_pages.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      onGenerateRoute: _appRoutes.onGenerateRoute,
+      // onGenerateRoute: _appRoutes.onGenerateRoute,
+      home: Technical_assistance_view(),
     );
   }
 }
