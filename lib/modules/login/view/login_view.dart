@@ -249,6 +249,7 @@ class _formValidationState extends State<_formValidation> {
       _formStateKey.currentState?.save();
       print('User name: ${_account.user}');
       print('Password: ${_account.password}');
+      Navigator.of(context).pushNamed(Routes.HOME);
     }
   }
 
@@ -263,8 +264,8 @@ class _formValidationState extends State<_formValidation> {
             children: <Widget>[
               Image.asset(
                 AppImages.ic_email,
-                height: height * 55 / 1136,
-                width: width * 20 / 640,
+                height: height * 45 / 1136,
+                width: width * 35 / 640,
               ),
               SizedBox(
                 width: width * 10 / 640,
@@ -319,7 +320,7 @@ class _formValidationState extends State<_formValidation> {
               Image.asset(
                 AppImages.ic_password,
                 height: height * 55 / 1136,
-                width: width * 20 / 640,
+                width: width * 35 / 640,
               ),
               SizedBox(
                 width: width * 10 / 640,
