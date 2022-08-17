@@ -76,6 +76,12 @@ abstract class HomeString {
   //home
   static const String HONE_TITLE = "Home";
   static const String TERM_CONDITIONS_TITLE = "Terms & Conditions";
+
+  static const String CONDITIONS_WARRANTY = "Conditions Warranty";
+  static const String STATUS_WARRANTY = "Status Warranty";
+  static const String DURATIONS_WARRANTY = "Durations Warranty";
+  static const String CUSTOMER_REPORT = "Customer Report Machine Error";
+
   static const String TERM_CONDITIONS_DESCRIPTION =
       "See what is covered under warranty";
   static const String WARRANTY_STATUS_TITLE = "Warranty Status";
