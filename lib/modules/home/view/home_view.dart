@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
                           HomeString.CONDITIONS_WARRANTY,
                           textAlign: TextAlign.right,
                           style:
-                              TextStyle(color: AppColors.white, fontSize: 28),
+                              TextStyle(color: AppColors.white, fontSize: 24),
                         ),
                       ),
                     ),
@@ -116,7 +116,7 @@ class Home extends StatelessWidget {
                           HomeString.STATUS_WARRANTY,
                           textAlign: TextAlign.right,
                           style:
-                              TextStyle(color: AppColors.white, fontSize: 28),
+                              TextStyle(color: AppColors.white, fontSize: 24),
                         ),
                       ),
                     ),
@@ -153,7 +153,7 @@ class Home extends StatelessWidget {
                       child: Text(
                         HomeString.DURATIONS_WARRANTY,
                         textAlign: TextAlign.right,
-                        style: TextStyle(color: AppColors.white, fontSize: 28),
+                        style: TextStyle(color: AppColors.white, fontSize: 24),
                       ),
                     ),
                     onTap: () {},
@@ -186,20 +186,10 @@ class Home extends StatelessWidget {
                           bottom: BorderSide(color: AppColors.white),
                         ),
                       ),
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 60,
-                          ),
-                          Flexible(
-                            child: Text(
-                              HomeString.CUSTOMER_REPORT,
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                  color: AppColors.white, fontSize: 28),
-                            ),
-                          ),
-                        ],
+                      child: Text(
+                        HomeString.CUSTOMER_REPORT,
+                        textAlign: TextAlign.right,
+                        style: TextStyle(color: AppColors.white, fontSize: 24),
                       ),
                     ),
                     onTap: () {},
