@@ -38,8 +38,9 @@ abstract class LoginString {
   static const String DISCOVER_THE_BEST_YOU = "DISCOVER THE BEST YOU";
   static const String FACE_ID = "FACE ID";
   static const String FINGERPRINT = "Fingerprint";
-  static const String TECHNICAL = "TECHNICAL ASSISTANCE";
+  static const String TECHNICAL = "Technical assistance";
   static const String FREQUENTLY = "FREQUENTLY ASKED QUESTION";
+  static const String FREQUENTLY_LOWERCASE = "Frequently asked questions";
   static const String USER_BLANK = "User name cannot blank";
 }
 
@@ -318,6 +319,9 @@ abstract class CommonString {
   static const String REQUIRE_STATUS = "Status is required field";
   static const String SPLASH_TEXT = "Nu Skin Enterprises Malaysia Ptd Ltd";
   static const String SELECT_DATE = "Select Date";
+  static const String LANGUAGE = "Language";
+  static const String CLOSE = "Close app";
+  static const String SIGN_OUT = "Sign out";
 }
 
 abstract class ConfigApi {

@@ -4,9 +4,17 @@ import 'package:flutter/rendering.dart';
 import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_images.dart';
 import 'package:project_internship/constants/app_string.dart';
+import 'package:project_internship/modules/home/widgets/left_drawer.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +24,20 @@ class Home extends StatelessWidget {
     return Container(
       color: AppColors.white,
       child: Scaffold(
+        key: _key,
+        drawer: LeftDrawerWidget(),
         backgroundColor: AppColors.transparent,
         appBar: AppBar(
           centerTitle: true,
           shadowColor: AppColors.transparent,
-          leading: Image.asset(
-            AppImages.ic_bars,
-            scale: 1.7,
+          leading: IconButton(
+            onPressed: () {
+              _key.currentState?.openDrawer();
+            },
+            icon: Image.asset(
+              AppImages.ic_bars,
+              scale: 1.7,
+            ),
           ),
           backgroundColor: AppColors.white,
           title: Text(
