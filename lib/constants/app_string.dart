@@ -341,3 +341,9 @@ abstract class ConfigApi {
   static const String LANG = "lang";
   static const String CUSTOMFIELD = "customfield";
 }
+
+abstract class App_String {
+  static const String FILTERDEVICE = "Filter device list";
+  static const String Scan = "Scan Series Of Machines ";
+  static const String Enter = "Enter The Machines Series Or Reference Number";
+}

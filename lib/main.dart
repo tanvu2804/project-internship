@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/modules/Status_Warranty/view/Check_Status_Warranty_view.dart';
 import 'package:project_internship/routes/app_pages.dart';
 
 void main() {
@@ -19,10 +20,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      onGenerateRoute: _appRoutes.onGenerateRoute,
+      theme: ThemeData(),
+      // onGenerateRoute: _appRoutes.onGenerateRoute,
+      home: Status_Warranty_View(),
     );
   }
 }
