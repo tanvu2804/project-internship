@@ -346,4 +346,8 @@ abstract class App_String {
   static const String FILTERDEVICE = "Filter device list";
   static const String Scan = "Scan Series Of Machines ";
   static const String Enter = "Enter The Machines Series Or Reference Number";
+  static const String REFERENCE = "Reference Number";
+  static const String SERIAL = "Serial Number";
+  static const String DEVICE = "Device Name";
+  static const String STATUS = "Warranty Status";
 }
