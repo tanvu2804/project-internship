@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_string.dart';
 
 class Status_Warranty_View extends StatefulWidget {
@@ -9,6 +10,81 @@ class Status_Warranty_View extends StatefulWidget {
 }
 
 class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
+  var GetData;
+
+  // File data = new File();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    var getData = [
+      {
+        "error": 0,
+        "data": [
+          {
+            "id": "7084",
+            "serries": "9M4R114A0020205",
+            "product": "ageLOC LumiSpa",
+            "status": "153",
+          },
+          {
+            "id": "7083",
+            "serries": "0M1R214A0011224",
+            "product": "ageLOC LumiSpa",
+            "status": "153",
+          },
+          {
+            "id": "7082",
+            "serries": "/00001703/9L102572",
+            "product": "EcoSphere Water Purifier",
+            "status": "151",
+          },
+          {
+            "id": "7081",
+            "serries": "/00001703/1A100203",
+            "product": "EcoSphere Water Purifier",
+            "status": "153",
+          },
+          {
+            "id": "7084",
+            "serries": "9M4R114A0020205",
+            "product": "ageLOC LumiSpa",
+            "status": "153",
+          },
+          {
+            "id": "7083",
+            "serries": "0M1R214A0011224",
+            "product": "ageLOC LumiSpa",
+            "status": "153",
+          },
+          {
+            "id": "7082",
+            "serries": "/00001703/9L102572",
+            "product": "EcoSphere Water Purifier",
+            "status": "151",
+          },
+          {
+            "id": "7081",
+            "serries": "/00001703/1A100203",
+            "product": "EcoSphere Water Purifier",
+            "status": "153",
+          },
+          {
+            "id": "7079",
+            "serries": "0J1R214A0011984",
+            "product": "ageLOC LumiSpa",
+            "status": "151",
+          },
+        ]
+      },
+      {"id:3"}
+    ];
+    GetData = getData;
+
+    print('a');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +146,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 10, top: 25, bottom: 25, right: 10),
+                    EdgeInsets.only(left: 10, top: 16, bottom: 25, right: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -129,7 +205,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                                 ),
                               ],
                             ),
-                            padding: EdgeInsets.only(left: 20, right: 15),
+                            padding: EdgeInsets.only(left: 15, right: 15),
                             height: (MediaQuery.of(context).size.width / 3) / 2,
                             alignment: Alignment.center,
                             width: MediaQuery.of(context).size.width / 2,
@@ -154,8 +230,8 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 15, bottom: 15),
+                    SizedBox(
+                      height: 16,
                     ),
                     Text(
                       'Your device list',
@@ -164,8 +240,8 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 10),
+                    SizedBox(
+                      height: 8,
                     ),
                     Container(
                       padding: EdgeInsets.only(
@@ -213,9 +289,10 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             ],
                           ),
                           Divider(
-                            thickness: 1.3,
+                            thickness: 1.15,
                             color: Color(0xff858585),
                           ),
+                          fill_in_Data(),
                         ],
                       ),
                     ),
@@ -253,7 +330,9 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                           ],
                         ),
                         onTap: () {
-                          print('e');
+                          setState(() {
+                            print(GetData[0]["data"][0]["id"]);
+                          });
                         },
                       ),
                     ),
@@ -265,6 +344,101 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
         ),
       ),
     );
+  }
+
+  //print(GetData[0]["data"][0]["id"]);
+
+  Widget fill_in_Data() {
+    return Expanded(
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(
+            8,
+            (int index) {
+              Padding(padding: EdgeInsets.all(15.0));
+              return All_Data_Table(index);
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget All_Data_Table(int index) {
+    return Column(
+      children: [
+        Row(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Fill_In_Table_id(index),
+            Fill_In_Table_serries(index),
+            Fill_In_Table_device(index),
+            Fill_In_Table_status(index),
+          ],
+        ),
+        Divider(
+          color: AppColors.gray,
+        )
+      ],
+    );
+  }
+
+  Widget Fill_In_Table_id(int index) {
+    return Container(
+        child: Text(
+          (GetData[0]["data"][index]["id"]),
+          style: TextStyle(
+            color: Color(0xff858585),
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        width: 70);
+  }
+
+  Widget Fill_In_Table_serries(int index) {
+    return Padding(
+      padding: EdgeInsets.only(left: 15, right: 15),
+      child: SizedBox(
+          child: Text(
+            (GetData[0]["data"][index]["serries"]),
+            style: TextStyle(
+              color: Color(0xff858585),
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          width: 70),
+    );
+  }
+
+  Widget Fill_In_Table_device(int index) {
+    return SizedBox(
+        child: Text(
+          (GetData[0]["data"][index]["product"]),
+          style: TextStyle(
+            color: Color(0xff858585),
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        width: 70);
+  }
+
+  Widget Fill_In_Table_status(int index) {
+    return SizedBox(
+        child: Text(
+          (GetData[0]["data"][index]["status"]),
+          style: TextStyle(
+            color: Color(0xff858585),
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        width: 70);
   }
 }
 
