@@ -3,14 +3,13 @@ import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_images.dart';
 import 'package:project_internship/constants/app_string.dart';
 
+import '../../../routes/app_routes.dart';
+
 class LeftDrawerWidget extends StatelessWidget {
   const LeftDrawerWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-
     return Drawer(
       child: ListView(
         children: <Widget>[
@@ -82,31 +81,6 @@ class LeftDrawerWidget extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          //Language
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            color: AppColors.bluePurple,
-            child: ListTile(
-              contentPadding:
-                  const EdgeInsets.only(left: 16, right: 4, top: 2, bottom: 2),
-              horizontalTitleGap: 15,
-              leading: Image.asset(
-                AppImages.ic_bell_drawer,
-                scale: 1.3,
-              ),
-              title: Text(
-                CommonString.LANGUAGE,
-                textAlign: TextAlign.left,
-                style: TextStyle(color: AppColors.white, fontSize: 20),
-              ),
-              onTap: () {},
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
           //Close app
           Card(
             shape: RoundedRectangleBorder(
@@ -151,7 +125,9 @@ class LeftDrawerWidget extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(color: AppColors.white, fontSize: 20),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(Routes.LOGIN);
+              },
             ),
           ),
         ],

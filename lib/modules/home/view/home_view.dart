@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
                   color: AppColors.bluePurple,
                   child: ListTile(
                     contentPadding: EdgeInsets.all(8),
-                    horizontalTitleGap: 60,
+                    horizontalTitleGap: 50,
                     leading: Container(
                       height: height / 9,
                       width: width / 6,
