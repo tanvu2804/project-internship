@@ -22,7 +22,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       // onGenerateRoute: _appRoutes.onGenerateRoute,
-      home: Status_Warranty_View(),
+      // home: Status_Warranty_View(),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => Status_Warranty_View(),
+        // '/enter': (_) => Enter_View()
+      },
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_string.dart';
+import 'package:project_internship/modules/Status_Warranty/view/Enter_Machines_View.dart';
 
 class Status_Warranty_View extends StatefulWidget {
   const Status_Warranty_View({Key? key}) : super(key: key);
@@ -225,7 +226,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             // ),
                           ),
                           onTap: () {
-                            print('c');
+                            Show_Dialog_Alert_Enter(context);
                           },
                         ),
                       ],
@@ -292,7 +293,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             thickness: 1.15,
                             color: Color(0xff858585),
                           ),
-                          fill_in_Data(),
+                          // fill_in_Data(),
                         ],
                       ),
                     ),
@@ -463,3 +464,10 @@ class Row_Title_Warranty_Status extends StatelessWidget {
         width: 70);
   }
 }
+
+// Widget Fill_In_Widget_ListView() {
+//   return ListView.builder(
+//     itemCount: item.length,
+//     itemBuilder: (Buildcontext context, int index) {},
+//   );
+// }
