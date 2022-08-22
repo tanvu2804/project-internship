@@ -10,6 +10,8 @@ abstract class Routes {
   static const String AGELOC_ME = _Paths.AGELOC_ME;
   static const String ECOSPHERE_WATER_PURIFIER = _Paths.ECOSPHERE_WATER_PURIFIER;
   static const String AGELOC_LUMISPA_ACCENT = _Paths.AGELOC_LUMISPA_ACCENT;
+  static const String HOME = _Paths.HOME;
+  static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
 }
 
 abstract class _Paths {
@@ -22,4 +24,6 @@ abstract class _Paths {
   static const String AGELOC_ME = '/ageloc-me';
   static const String ECOSPHERE_WATER_PURIFIER = '/ecos';
   static const String AGELOC_LUMISPA_ACCENT = '/ageloc-lumispa-accent';
+  static const String HOME = '/home';
+  static const String FREQUENTLYQUESTION = '/frequently_questions';
 }

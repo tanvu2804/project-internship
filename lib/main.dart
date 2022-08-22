@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/modules/frequently_questions/view/frequently_questions.dart';
 import 'package:project_internship/routes/app_pages.dart';
 
 void main() {
