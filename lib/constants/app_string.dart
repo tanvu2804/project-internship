@@ -24,6 +24,9 @@ abstract class LoginString {
   static const String LOGIN = "LOG IN";
   static const String EMAIL = "Email address";
   static const String PASSWORD = "Password";
+  static const String PASSWORD_BLANK = "Password cannot blank";
+  static const String PASSWORD_CHARACTER =
+      "Password must have at least 5 characters";
   static const String REMEMBER_ME = "REMEMBER ME";
   static const String FORGOT_PASSWORD_UPPERCASE = "FORGET PASSWORD?";
   static const String AGREE_TERM = "By continuing, you agree to the";
@@ -31,10 +34,13 @@ abstract class LoginString {
   static const String PRIVACY_POLICY = "Privacy Policy";
   static const String TERM = "Terms of Service";
   static const String NOT_ACCOUNT = "Don't have an account ? ";
-  static const String SIGNUP_HERE = "Sign up here";
+  static const String SIGNUP_HERE = "SIGN UP";
   static const String DISCOVER_THE_BEST_YOU = "DISCOVER THE BEST YOU";
   static const String FACE_ID = "FACE ID";
   static const String FINGERPRINT = "Fingerprint";
+  static const String TECHNICAL = "TECHNICAL ASSISTANCE";
+  static const String FREQUENTLY = "FREQUENTLY ASKED QUESTION";
+  static const String USER_BLANK = "User name cannot blank";
 }
 
 abstract class ForgetPassString {
@@ -46,12 +52,6 @@ abstract class ForgetPassString {
   static const String SIGNUP_HERE = "Sign up here";
   static const String SUCCESS_TITLE = "An email has been sent!";
   static const String OK = "OK";
-}
-
-abstract class FrequentlyQuestion {
-  static const String FrequentlyTitle = "Frequently asked questions";
-  static const String QUESTION =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing";
 }
 
 abstract class SignUpString {
@@ -76,6 +76,12 @@ abstract class HomeString {
   //home
   static const String HONE_TITLE = "Home";
   static const String TERM_CONDITIONS_TITLE = "Terms & Conditions";
+
+  static const String CONDITIONS_WARRANTY = "Conditions Warranty";
+  static const String STATUS_WARRANTY = "Status Warranty";
+  static const String DURATIONS_WARRANTY = "Durations Warranty";
+  static const String CUSTOMER_REPORT = "Customer Report Machine Error";
+
   static const String TERM_CONDITIONS_DESCRIPTION =
       "See what is covered under warranty";
   static const String WARRANTY_STATUS_TITLE = "Warranty Status";
@@ -130,6 +136,7 @@ abstract class ContactString {
 abstract class ResourcesString {
   static const String RESOURCES_TITLE = "Resources";
   static const String SEARCH_BAR = "Search";
+  static const String SEARCH_BAR = "Search bar";
 }
 
 abstract class WarrantyStatusString {
