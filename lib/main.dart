@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_internship/modules/Status_Warranty/view/Check_Status_Warranty_view.dart';
-import 'package:project_internship/modules/frequently_questions/view/frequently_questions.dart';
 import 'package:project_internship/routes/app_pages.dart';
 
 void main() {
@@ -22,13 +20,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      // onGenerateRoute: _appRoutes.onGenerateRoute,
-      // home: Status_Warranty_View(),
-      initialRoute: '/',
-      routes: {
-        '/': (_) => Status_Warranty_View(),
-        // '/enter': (_) => Enter_View()
-      },
+      onGenerateRoute: _appRoutes.onGenerateRoute,
     );
   }
 }

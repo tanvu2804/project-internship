@@ -12,13 +12,18 @@ class Status_Warranty_View extends StatefulWidget {
 
 class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
   var GetData;
+  String? string;
+  int? index;
 
+  final _FormKey = GlobalKey<FormState>();
   // File data = new File();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    string = "";
+    index = 0;
     var getData = [
       {
         "error": 0,
@@ -192,7 +197,6 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                           },
                         ),
                         InkWell(
-                          // borderRadius: BorderRadius.circular(5.0),
                           child: Container(
                             decoration: BoxDecoration(
                               color: Color(0xff7123D9),
@@ -226,7 +230,8 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             // ),
                           ),
                           onTap: () {
-                            Show_Dialog_Alert_Enter(context);
+                            Show_Dialog_Alert_Enter(
+                                context, _FormKey, index!, string!);
                           },
                         ),
                       ],
@@ -333,6 +338,8 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                         onTap: () {
                           setState(() {
                             print(GetData[0]["data"][0]["id"]);
+                            print("$index");
+                            print("$string");
                           });
                         },
                       ),
@@ -356,9 +363,8 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            8,
+            1,
             (int index) {
-              Padding(padding: EdgeInsets.all(15.0));
               return All_Data_Table(index);
             },
           ),
