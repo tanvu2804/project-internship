@@ -1,5 +1,9 @@
 class AppImages {
   AppImages._();
+
+  static final String icSearch = 'assets/images/icons/search.png';
+  static final String icQuestionCircle =
+      'assets/images/icons/question-circle.png';
   //background
   static final String bg_login = 'assets/images/backgrounds/bg_login.png';
   static final String bg_sign_up = 'assets/images/backgrounds/bg_sign_up.png';

@@ -3,11 +3,11 @@ import 'package:project_internship/modules/home/view/home_view.dart';
 import 'package:project_internship/modules/login/view/login_view.dart';
 import 'package:project_internship/modules/sign_up/view/sign_up_view.dart';
 
+import '../modules/frequently_questions/view/frequently_questions.dart';
 import 'app_routes.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings routeSettings) {
-    print("sadasd");
     switch (routeSettings.name) {
       case "/":
         return MaterialPageRoute(builder: (_) => Login());
@@ -17,6 +17,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => SignUp());
       case Routes.HOME:
         return MaterialPageRoute(builder: (_) => Home());
+      case Routes.FREQUENTLYQUESTION:
+        return MaterialPageRoute(builder: (_) => FrequentlyQuestions());
       default:
         return null;
     }
