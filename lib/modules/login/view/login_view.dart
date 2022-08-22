@@ -101,7 +101,10 @@ class _LoginState extends State<Login> {
                     style: TextButton.styleFrom(
                       primary: AppColors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(Routes.FREQUENTLYQUESTION);
+                    },
                     child: Text(
                       LoginString.FREQUENTLY,
                       style: TextStyle(

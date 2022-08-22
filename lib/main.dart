@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/modules/Status_Warranty/view/Check_Status_Warranty_view.dart';
+import 'package:project_internship/modules/frequently_questions/view/frequently_questions.dart';
 import 'package:project_internship/routes/app_pages.dart';
 
 void main() {

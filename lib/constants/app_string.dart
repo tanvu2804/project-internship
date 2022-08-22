@@ -38,8 +38,9 @@ abstract class LoginString {
   static const String DISCOVER_THE_BEST_YOU = "DISCOVER THE BEST YOU";
   static const String FACE_ID = "FACE ID";
   static const String FINGERPRINT = "Fingerprint";
-  static const String TECHNICAL = "TECHNICAL ASSISTANCE";
+  static const String TECHNICAL = "Technical assistance";
   static const String FREQUENTLY = "FREQUENTLY ASKED QUESTION";
+  static const String FREQUENTLY_LOWERCASE = "Frequently asked questions";
   static const String USER_BLANK = "User name cannot blank";
 }
 
@@ -52,6 +53,12 @@ abstract class ForgetPassString {
   static const String SIGNUP_HERE = "Sign up here";
   static const String SUCCESS_TITLE = "An email has been sent!";
   static const String OK = "OK";
+}
+
+abstract class FrequentlyQuestion {
+  static const String FrequentlyTitle = "Frequently asked questions";
+  static const String QUESTION =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing";
 }
 
 abstract class SignUpString {
@@ -135,7 +142,7 @@ abstract class ContactString {
 
 abstract class ResourcesString {
   static const String RESOURCES_TITLE = "Resources";
-  static const String SEARCH_BAR = "Search bar";
+  static const String SEARCH_BAR = "Search";
 }
 
 abstract class WarrantyStatusString {
@@ -318,6 +325,9 @@ abstract class CommonString {
   static const String REQUIRE_STATUS = "Status is required field";
   static const String SPLASH_TEXT = "Nu Skin Enterprises Malaysia Ptd Ltd";
   static const String SELECT_DATE = "Select Date";
+  static const String LANGUAGE = "Language";
+  static const String CLOSE = "Close app";
+  static const String SIGN_OUT = "Sign out";
 }
 
 abstract class ConfigApi {
