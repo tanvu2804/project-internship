@@ -7,7 +7,6 @@ import 'app_routes.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings routeSettings) {
-    print("sadasd");
     switch (routeSettings.name) {
       case "/":
         return MaterialPageRoute(builder: (_) => Login());

@@ -54,6 +54,12 @@ abstract class ForgetPassString {
   static const String OK = "OK";
 }
 
+abstract class FrequentlyQuestion {
+  static const String FrequentlyTitle = "Frequently asked questions";
+  static const String QUESTION =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing";
+}
+
 abstract class SignUpString {
   static const String SIGNUP_TITLE = "Create a new account";
   static const String DISCOVER_THE_BEST_YOU = "DISCOVER THE BEST YOU";
@@ -136,7 +142,6 @@ abstract class ContactString {
 abstract class ResourcesString {
   static const String RESOURCES_TITLE = "Resources";
   static const String SEARCH_BAR = "Search";
-  static const String SEARCH_BAR = "Search bar";
 }
 
 abstract class WarrantyStatusString {
