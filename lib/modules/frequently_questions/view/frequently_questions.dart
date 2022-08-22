@@ -4,8 +4,8 @@ import 'package:project_internship/constants/app_string.dart';
 import 'package:project_internship/modules/frequently_questions/widgets/listquestion.dart';
 import 'package:project_internship/modules/frequently_questions/widgets/searchbar.dart';
 
-class frequently_questions extends StatelessWidget {
-  frequently_questions({Key? key}) : super(key: key);
+class FrequentlyQuestions extends StatelessWidget {
+  FrequentlyQuestions({Key? key}) : super(key: key);
 
   final List questionList = List.generate(20, (index) {
     return {
@@ -24,7 +24,9 @@ class frequently_questions extends StatelessWidget {
             backgroundColor: Colors.transparent,
             appBar: AppBar(
               leading: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: Icon(
                     Icons.arrow_back_ios,
                     color: AppColors.pinkPurple,
