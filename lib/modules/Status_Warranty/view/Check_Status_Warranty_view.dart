@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_string.dart';
-import 'package:project_internship/modules/Status_Warranty/view/Enter_Machines_View.dart';
 
 class Status_Warranty_View extends StatefulWidget {
   const Status_Warranty_View({Key? key}) : super(key: key);
@@ -12,18 +11,28 @@ class Status_Warranty_View extends StatefulWidget {
 
 class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
   var GetData;
-  String? string;
-  int? index;
+  late String Serial;
+  late String Reference;
 
-  final _FormKey = GlobalKey<FormState>();
+  late var _FormKey = GlobalKey<FormState>();
   // File data = new File();
+
+  void _Submit() {
+    if (_FormKey.currentState!.validate()) {
+      _FormKey.currentState?.save();
+      print(Serial);
+      Navigator.pop(context);
+    } else
+      print('b');
+  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    string = "";
-    index = 0;
+    _FormKey = new GlobalKey<FormState>();
+    Serial = "";
+    Reference = "";
     var getData = [
       {
         "error": 0,
@@ -230,8 +239,208 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             // ),
                           ),
                           onTap: () {
-                            Show_Dialog_Alert_Enter(
-                                context, _FormKey, index!, string!);
+                            showDialog(
+                              context: context,
+                              builder: (_) => AlertDialog(
+                                title: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 8,
+                                          left: 8,
+                                          right: 16,
+                                          bottom: 16),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        color: Colors.white,
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                            showDialog(
+                                                context: context,
+                                                builder: (_) {
+                                                  return AlertDialog(
+                                                    // insetPadding: EdgeInsets.only(
+                                                    //   left: 50,
+                                                    //   right: 50,
+                                                    //   top: 200,
+                                                    //   bottom: 245,
+                                                    // ),
+                                                    title: Text(
+                                                        'Enter serial number'),
+                                                    content: Form(
+                                                      key: _FormKey,
+                                                      child: TextFormField(
+                                                        validator: (value) =>
+                                                            value!.isEmpty
+                                                                ? "asd"
+                                                                : null,
+                                                        onSaved: (value) {
+                                                          Serial = value!;
+                                                        },
+                                                        keyboardType:
+                                                            TextInputType
+                                                                .multiline,
+                                                        decoration:
+                                                            InputDecoration(
+                                                          contentPadding:
+                                                              EdgeInsets.only(
+                                                                  left: 25),
+                                                          // Border(
+                                                          //   bottom: BorderSide(color:Colors.grey.shade400),
+                                                          // ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    actions: [
+                                                      FlatButton(
+                                                        onPressed: () {
+                                                          Navigator.pop(
+                                                              context);
+                                                        },
+                                                        child: Text('CANCEL'),
+                                                      ),
+                                                      FlatButton(
+                                                        onPressed: () {
+                                                          setState(() {
+                                                            _Submit();
+                                                          });
+                                                        },
+                                                        child: Text("OK"),
+                                                      ),
+                                                    ],
+                                                    contentPadding:
+                                                        EdgeInsets.zero,
+                                                  );
+                                                });
+                                          },
+                                          child: Text(
+                                            'Enter serial number',
+                                            style: TextStyle(
+                                                fontStyle: FontStyle.normal,
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 15),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 8,
+                                          left: 8,
+                                          right: 16,
+                                          bottom: 8),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        color: Colors.white,
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                            showDialog(
+                                                context: context,
+                                                builder: (_) {
+                                                  return AlertDialog(
+                                                    // insetPadding: EdgeInsets.only(
+                                                    //   left: 50,
+                                                    //   right: 50,
+                                                    //   top: 200,
+                                                    //   bottom: 245,
+                                                    // ),
+                                                    title: Text(
+                                                        'Enter reference number'),
+                                                    content: Form(
+                                                      key: _FormKey,
+                                                      child: TextFormField(
+                                                        validator: (value) =>
+                                                            value!.isEmpty
+                                                                ? "asd"
+                                                                : null,
+                                                        onSaved: (value) {
+                                                          Reference = (value)!;
+                                                        },
+                                                        keyboardType:
+                                                            TextInputType
+                                                                .number,
+                                                        decoration:
+                                                            InputDecoration(
+                                                          contentPadding:
+                                                              EdgeInsets.only(
+                                                                  left: 25),
+                                                          // Border(
+                                                          //   bottom: BorderSide(color:Colors.grey.shade400),
+                                                          // ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    actions: [
+                                                      FlatButton(
+                                                        onPressed: () {
+                                                          Navigator.pop(
+                                                              context);
+                                                        },
+                                                        child: Text('CANCEL'),
+                                                      ),
+                                                      FlatButton(
+                                                        onPressed: () {
+                                                          // _Submit();
+                                                          setState(() {
+                                                            _Submit();
+                                                          });
+                                                        },
+                                                        child: Text("OK"),
+                                                      ),
+                                                    ],
+                                                    contentPadding:
+                                                        EdgeInsets.zero,
+                                                  );
+                                                });
+                                          },
+                                          child: Text(
+                                            'Enter reference number',
+                                            style: TextStyle(
+                                                fontStyle: FontStyle.normal,
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 15),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                actions: [
+                                  Container(
+                                    width: 70,
+                                    height: 40,
+                                    child: Center(
+                                      child: InkWell(
+                                        onTap: () {
+                                          print('success');
+                                        },
+                                        child: Text(
+                                          'CANCEL',
+                                          style: TextStyle(
+                                              color: Colors.blueAccent,
+                                              fontWeight: FontWeight.w800),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                                backgroundColor: Colors.white,
+                                insetPadding: EdgeInsets.only(
+                                  left: 50,
+                                  right: 50,
+                                  top: 200,
+                                  bottom: 245,
+                                ),
+                                alignment: Alignment.centerLeft,
+                                scrollable: true,
+                                titlePadding: EdgeInsets.only(left: 5, top: 5),
+                              ),
+                            );
                           },
                         ),
                       ],
@@ -298,7 +507,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                             thickness: 1.15,
                             color: Color(0xff858585),
                           ),
-                          // fill_in_Data(),
+                          fill_in_Data(),
                         ],
                       ),
                     ),
@@ -336,11 +545,13 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                           ],
                         ),
                         onTap: () {
-                          setState(() {
-                            print(GetData[0]["data"][0]["id"]);
-                            print("$index");
-                            print("$string");
-                          });
+                          print(GetData[0]["data"][0]["id"]);
+                          String b = GetData[0]["data"][0]["id"];
+                          String c = GetData[0]["data"][0]["serries"];
+                          print('C : $c');
+                          print('$Serial');
+                          print('$Reference');
+                          print('B : $b');
                         },
                       ),
                     ),
@@ -354,6 +565,9 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
     );
   }
 
+  Widget View_Empty() {
+    return Container();
+  }
   //print(GetData[0]["data"][0]["id"]);
 
   Widget fill_in_Data() {
@@ -363,13 +577,33 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            1,
+            9,
             (int index) {
-              return All_Data_Table(index);
+              print('$Serial');
+              print('$Reference');
+              if (Serial == GetData[0]["data"][index]["serries"] ||
+                  Reference == GetData[0]["data"][index]["id"]) {
+                print('thanh cong');
+                if (Serial != null || Reference != null) {
+                  return All_Data_Table(index);
+                }
+              }
+              return View_Empty();
             },
           ),
         ),
       ),
+    );
+  }
+
+  Widget List_View_Data() {
+    return ListView.builder(
+      itemCount: 20,
+      itemBuilder: (BuildContext context, int index) {
+        return All_Data_Table(index);
+      },
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
     );
   }
 
@@ -408,7 +642,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
 
   Widget Fill_In_Table_serries(int index) {
     return Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
+      padding: EdgeInsets.only(left: 40, right: 35),
       child: SizedBox(
           child: Text(
             (GetData[0]["data"][index]["serries"]),
@@ -423,16 +657,19 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
   }
 
   Widget Fill_In_Table_device(int index) {
-    return SizedBox(
-        child: Text(
-          (GetData[0]["data"][index]["product"]),
-          style: TextStyle(
-            color: Color(0xff858585),
-            fontWeight: FontWeight.w400,
+    return Padding(
+      padding: EdgeInsets.only(left: 15, right: 35),
+      child: SizedBox(
+          child: Text(
+            (GetData[0]["data"][index]["product"]),
+            style: TextStyle(
+              color: Color(0xff858585),
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
-        width: 70);
+          width: 70),
+    );
   }
 
   Widget Fill_In_Table_status(int index) {
