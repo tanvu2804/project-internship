@@ -31,4 +31,5 @@ class AppImages {
 
   //other
   static final String privacy = 'assets/images/others/privacy.png';
+
 }
