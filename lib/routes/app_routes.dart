@@ -12,13 +12,14 @@ abstract class Routes {
   static const String AGELOC_LUMISPA_ACCENT = _Paths.AGELOC_LUMISPA_ACCENT;
   static const String HOME = _Paths.HOME;
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
+  static const String CONTACT_US = _Paths.CONTACT_US;
 }
 
 abstract class _Paths {
   static const String LOGIN = '/login';
   static const String SIGN_UP = '/sign-up';
   static const String GALVANIC_BODY_SPA = '/galvalnic-body-spa';
-  static const String AGELOC_LUMISPA = '/galvalnic-body-spa';
+  static const String AGELOC_LUMISPA = '/ageloc-lumispa';
   static const String AGELOC_BOOST = '/ageloc-boost';
   static const String AGELOC_GALVANIC_SPA = '/ageloc-galvanic-spa';
   static const String AGELOC_ME = '/ageloc-me';
@@ -26,4 +27,5 @@ abstract class _Paths {
   static const String AGELOC_LUMISPA_ACCENT = '/ageloc-lumispa-accent';
   static const String HOME = '/home';
   static const String FREQUENTLYQUESTION = '/frequently_questions';
+  static const String CONTACT_US = '/contact-us';
 }

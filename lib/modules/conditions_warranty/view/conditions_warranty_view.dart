@@ -19,7 +19,7 @@ class _ConditionsWarrantyState extends State<ConditionsWarranty> {
         elevation: 0,
         title: Text('Conditions Warranty'),
         titleTextStyle: TextStyle(
-          color: AppColors.purplePink,
+          color: Color(0xFF7123D9),
           fontSize: 20.0,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.bold,
@@ -28,7 +28,7 @@ class _ConditionsWarrantyState extends State<ConditionsWarranty> {
           padding: EdgeInsets.only(left: 10.0),
           icon: Icon(Icons.chevron_left),
           iconSize: 40.0,
-          color: AppColors.purplePink,
+          color: Color(0xFF7123D9),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -310,33 +310,14 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-        // padding: const EdgeInsets.all(8.0),
-        // height: 70,
-        // width: 340,
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.all(Radius.circular(5.0)),
-        //   color: AppColors.bluePurple,
-        // ),
-        // child: InkWell(
-        //   onTap: (){},
-        // child: Container(
-        //   color: AppColors.purplePink,
-        //   width: 120,
-        //   height: 70,
-        //   child: Center(
-        //     child: Text('CONTACT US',
-        //     style: TextStyle(
-        //       fontWeight: FontWeight.bold
-        //     )),
-        //   ),
-        // ),
-        // ),
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(Routes.CONTACT_US);
+            },
             child: Text('CONTACT US'),
             style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),

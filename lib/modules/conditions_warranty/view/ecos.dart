@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/constants/app_colors.dart';
+import 'package:pdfx/pdfx.dart';
 class EcosWater extends StatefulWidget {
   const EcosWater({Key? key}) : super(key: key);
 
@@ -8,6 +9,9 @@ class EcosWater extends StatefulWidget {
 }
 
 class _EcosWater extends State<EcosWater> {
+  final pdfController = PdfController(
+    document: PdfDocument.openAsset('assets/images/others/ecos.pdf'),
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +20,7 @@ class _EcosWater extends State<EcosWater> {
         elevation: 0,
         title: Text('Conditions Warranty'),
         titleTextStyle: TextStyle(
-          color: AppColors.purplePink,
+          color: Color(0xFF7123D9),
           fontSize: 20.0,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.bold,
@@ -25,11 +29,18 @@ class _EcosWater extends State<EcosWater> {
           padding: EdgeInsets.only(left: 10.0),
           icon: Icon(Icons.chevron_left),
           iconSize: 40.0,
-          color: AppColors.purplePink,
+          color: Color(0xFF7123D9),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
+      ),
+      body: PdfView(
+        controller: pdfController,
+        scrollDirection: Axis.vertical,
+        renderer: (PdfPage page) => page.render(
+            width: page.width * 2,
+            height: page.height * 2),
       ),
     );
   }
