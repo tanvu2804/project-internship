@@ -6,6 +6,8 @@ import 'package:project_internship/constants/app_images.dart';
 import 'package:project_internship/constants/app_string.dart';
 import 'package:project_internship/modules/home/widgets/left_drawer.dart';
 
+import '../../../routes/app_routes.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -171,7 +173,9 @@ class _HomeState extends State<Home> {
                         style: TextStyle(color: AppColors.white, fontSize: 24),
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(Routes.DURATIONS_ERROR);
+                    },
                   ),
                 ),
                 SizedBox(

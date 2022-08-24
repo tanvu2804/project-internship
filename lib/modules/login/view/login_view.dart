@@ -103,7 +103,7 @@ class _LoginState extends State<Login> {
                     ),
                     onPressed: () {
                       Navigator.of(context)
-                          .pushNamed(Routes.FREQUENTLYQUESTION);
+                          .pushNamed(Routes.FREQUENTLY_QUESTION);
                     },
                     child: Text(
                       LoginString.FREQUENTLY,
