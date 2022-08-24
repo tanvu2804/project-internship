@@ -5,6 +5,7 @@ import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_images.dart';
 import 'package:project_internship/constants/app_string.dart';
 import 'package:project_internship/modules/home/widgets/left_drawer.dart';
+import 'package:project_internship/routes/app_routes.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -94,7 +95,10 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(Routes.CONDITION_WARRANTY);
+                    },
                   ),
                 ),
                 SizedBox(

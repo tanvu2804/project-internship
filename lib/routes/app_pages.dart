@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_internship/constants/app_string.dart';
 import 'package:project_internship/modules/conditions_warranty/view/ageloc-boost.dart';
 import 'package:project_internship/modules/conditions_warranty/view/ageloc_galvanic_spa.dart';
 import 'package:project_internship/modules/conditions_warranty/view/ageloc_lumispa.dart';
@@ -9,8 +8,6 @@ import 'package:project_internship/modules/conditions_warranty/view/conditions_w
 import 'package:project_internship/modules/conditions_warranty/view/contact_us.dart';
 import 'package:project_internship/modules/conditions_warranty/view/ecos.dart';
 import 'package:project_internship/modules/conditions_warranty/view/galvanic_body_spa.dart';
-import 'package:project_internship/modules/login/view/login_view.dart';
-import 'package:project_internship/modules/sign_up/view/sign_up_view.dart';
 import 'package:project_internship/modules/home/view/home_view.dart';
 import 'package:project_internship/modules/login/view/login_view.dart';
 import 'package:project_internship/modules/sign_up/view/sign_up_view.dart';
@@ -22,9 +19,9 @@ class AppRouter {
   Route? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case "/":
-        return MaterialPageRoute(builder: (_) => ConditionsWarranty());
-      // case Routes.LOGIN:
-      //   return MaterialPageRoute(builder: (_) => Login());
+        return MaterialPageRoute(builder: (_) => Login());
+      case Routes.LOGIN:
+        return MaterialPageRoute(builder: (_) => Login());
       case Routes.SIGN_UP:
         return MaterialPageRoute(builder: (_) => SignUp());
       case Routes.GAVANIC_BODY_SPA:
@@ -47,6 +44,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => Home());
       case Routes.FREQUENTLYQUESTION:
         return MaterialPageRoute(builder: (_) => FrequentlyQuestions());
+      case Routes.CONDITION_WARRANTY:
+        return MaterialPageRoute(builder: (_) => ConditionsWarranty());
       default:
         return null;
     }

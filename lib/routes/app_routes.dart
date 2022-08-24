@@ -8,11 +8,13 @@ abstract class Routes {
   static const String AGELOC_BOOST = _Paths.AGELOC_BOOST;
   static const String AGELOC_GALVANIC_SPA = _Paths.AGELOC_GALVANIC_SPA;
   static const String AGELOC_ME = _Paths.AGELOC_ME;
-  static const String ECOSPHERE_WATER_PURIFIER = _Paths.ECOSPHERE_WATER_PURIFIER;
+  static const String ECOSPHERE_WATER_PURIFIER =
+      _Paths.ECOSPHERE_WATER_PURIFIER;
   static const String AGELOC_LUMISPA_ACCENT = _Paths.AGELOC_LUMISPA_ACCENT;
   static const String HOME = _Paths.HOME;
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
   static const String CONTACT_US = _Paths.CONTACT_US;
+  static const String CONDITION_WARRANTY = _Paths.CONDITION_WARRANTY;
 }
 
 abstract class _Paths {
@@ -28,4 +30,5 @@ abstract class _Paths {
   static const String HOME = '/home';
   static const String FREQUENTLYQUESTION = '/frequently_questions';
   static const String CONTACT_US = '/contact-us';
+  static const String CONDITION_WARRANTY = '/condition-warranty';
 }
