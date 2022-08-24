@@ -38,7 +38,8 @@ abstract class LoginString {
   static const String DISCOVER_THE_BEST_YOU = "DISCOVER THE BEST YOU";
   static const String FACE_ID = "FACE ID";
   static const String FINGERPRINT = "Fingerprint";
-  static const String TECHNICAL = "Technical assistance";
+  static const String TECHNICAL = "TECHNICAL ASSISTANCE";
+  static const String TECHNICAL_LOWERCASE = "Technical assistance";
   static const String FREQUENTLY = "FREQUENTLY ASKED QUESTION";
   static const String FREQUENTLY_LOWERCASE = "Frequently asked questions";
   static const String USER_BLANK = "User name cannot blank";
@@ -150,18 +151,40 @@ abstract class WarrantyStatusString {
   static const String DEVICE_SERIAL_NUMBER = "Device serial number";
   static const String SERIAL_NUMBER_EDIT_TEXT = "Serial number";
   static const String WARRANTY_STATUS_TITLE = "Warranty Status";
+  static const String DEVICE_SERIAL_TITLE = "Device series scan";
 
   static const String DETAIL_DEVICE_SERIAL = "Device Serial Number:";
   static const String DETAIL_DEVICE_NAME = "Device Name:";
+  static const String DETAIL_ORDER_NUMBER = "Order Number:";
+  static const String DETAIL_CONTACT_SELLER = "Contact Seller:";
   static const String DETAIL_INVOICE_NUMBER = "Invoice Number:";
+  static const String DETAIL_DURATIONS_WARRANTY = "Durations Warranty:";
   static const String DETAIL_DATE_OF_PURCHASE = "Date of Purchase:";
   static const String DETAIL_REMAINING_WARRANTY = "Remaining warranty";
   static const String DETAIL_WARRANTY_DATE = "Warranty Date";
+
   static const String OUT_OF_WARRANTY = "Out of warranty";
+
+  static const String ERROR_TITLE =
+      "Could be due to reasons if you can't scan the series code:";
+  static const String ERROR_1 =
+      "1/ Your device serial number may be in the old format";
+  static const String ERROR_2 =
+      "2/ Your device may not be purchased from Nu Skin Vietnam";
+  static const String ERROR_CONTACT =
+      "Please contact via Emil or Hotline for more details";
+  static const String ERROR_CONTACT_HOTLINE = "Hotline:  +603 2170 7888";
+  static const String ERROR_CONTACT_EMAIL = "Email: mycompliance@nuskin.com";
+
+  static const String OUT_OF_WARRANTY_TITLE = "Your device is out of warranty";
+  static const String OUT_OF_WARRANTY_CONTACT = "Please contact";
+  static const String OUT_OF_WARRANTY_CONTACT_EMAIL =
+      "48hrs_reply_indonesia@nuskin.com";
+  static const String OUT_OF_WARRANTY_FURTHER = "For further asisstance";
 
   static const String DETAIL_DAY = " days";
   static const String BTN_EXIT = "EXIT";
-  static const String BTN_SCAN = "Scan";
+  static const String BTN_SCAN = "SCAN";
   static const String WAITING_UPDATE = "Waiting for update";
   static const String RESULT = "Result";
   static const String CHECK_TOMORROW = "PLEASE CHECK AGAIN ON TOMORROW";

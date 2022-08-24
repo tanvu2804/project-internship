@@ -23,6 +23,10 @@ class AppImages {
   static final String ic_question = 'assets/images/icons/ic_question.png';
   static final String ic_signoutalt = 'assets/images/icons/ic_signoutalt.png';
   static final String ic_times = 'assets/images/icons/ic_times.png';
+  static final String ic_phone_purple =
+      'assets/images/icons/ic_phone_purple.png';
+  static final String ic_envelope_purple =
+      'assets/images/icons/ic_envelope_purple.png';
 
   //logo
   static final String logo_nuskin = 'assets/images/logos/nuskinwhite_logo.png';

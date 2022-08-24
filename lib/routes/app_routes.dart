@@ -12,6 +12,10 @@ abstract class Routes {
       _Paths.ECOSPHERE_WATER_PURIFIER;
   static const String AGELOC_LUMISPA_ACCENT = _Paths.AGELOC_LUMISPA_ACCENT;
   static const String HOME = _Paths.HOME;
+  static const String FREQUENTLY_QUESTION = _Paths.FREQUENTLY_QUESTION;
+  static const String DURATIONS = _Paths.DURATIONS;
+  static const String DEVICES_SCAN = _Paths.DEVICES_SCAN;
+  static const String DURATIONS_ERROR = _Paths.DURATIONS_ERROR;
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
   static const String CONTACT_US = _Paths.CONTACT_US;
   static const String CONDITION_WARRANTY = _Paths.CONDITION_WARRANTY;
@@ -28,6 +32,10 @@ abstract class _Paths {
   static const String ECOSPHERE_WATER_PURIFIER = '/ecos';
   static const String AGELOC_LUMISPA_ACCENT = '/ageloc-lumispa-accent';
   static const String HOME = '/home';
+  static const String FREQUENTLY_QUESTION = '/frequently_questions';
+  static const String DURATIONS = '/durations_warranty';
+  static const String DEVICES_SCAN = '/device_series_scan';
+  static const String DURATIONS_ERROR = '/durations_warranty_error';
   static const String FREQUENTLYQUESTION = '/frequently_questions';
   static const String CONTACT_US = '/contact-us';
   static const String CONDITION_WARRANTY = '/condition-warranty';

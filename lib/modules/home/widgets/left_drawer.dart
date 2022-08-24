@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_images.dart';
 import 'package:project_internship/constants/app_string.dart';
 
 import '../../../routes/app_routes.dart';
+import '../../login/view/login_view.dart';
 
 class LeftDrawerWidget extends StatelessWidget {
   const LeftDrawerWidget({Key? key}) : super(key: key);
@@ -46,7 +48,7 @@ class LeftDrawerWidget extends StatelessWidget {
                 scale: 1.3,
               ),
               title: Text(
-                LoginString.TECHNICAL,
+                LoginString.TECHNICAL_LOWERCASE,
                 textAlign: TextAlign.left,
                 style: TextStyle(color: AppColors.white, fontSize: 20),
               ),
@@ -75,7 +77,9 @@ class LeftDrawerWidget extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(color: AppColors.white, fontSize: 20),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(Routes.FREQUENTLY_QUESTION);
+              },
             ),
           ),
           SizedBox(
@@ -100,7 +104,9 @@ class LeftDrawerWidget extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(color: AppColors.white, fontSize: 20),
               ),
-              onTap: () {},
+              onTap: () {
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              },
             ),
           ),
           SizedBox(
@@ -126,7 +132,8 @@ class LeftDrawerWidget extends StatelessWidget {
                 style: TextStyle(color: AppColors.white, fontSize: 20),
               ),
               onTap: () {
-                Navigator.of(context).pushNamed(Routes.LOGIN);
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (_) => Login()));
               },
             ),
           ),
