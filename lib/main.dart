@@ -13,13 +13,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final AppRouter _appRoutes = AppRouter();
+  final AppRouter _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: _appRoutes.onGenerateRoute,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      onGenerateRoute: _appRouter.onGenerateRoute,
     );
   }
 }
