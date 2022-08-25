@@ -6,6 +6,7 @@ abstract class Routes {
   static const String HOME = _Paths.HOME;
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
   static const String CHECK = _Paths.CHECK;
+  static const String FILTER = _Paths.FILTER;
 }
 
 abstract class _Paths {
@@ -14,4 +15,5 @@ abstract class _Paths {
   static const String HOME = '/home';
   static const String FREQUENTLYQUESTION = '/frequently_questions';
   static const String CHECK = "/check";
+  static const String FILTER = "/filter";
 }
