@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_internship/modules/customer_report_error/view/customer_report_error_view.dart';
+import 'package:project_internship/modules/customer_report_error/view/device_error_view.dart';
 import 'package:project_internship/modules/device_series_scan/view/device_series_scan_view.dart';
 import 'package:project_internship/modules/durations_warranty/view/durations_warranty_view.dart';
 import 'package:project_internship/modules/durations_warranty_error/view/durations_warranty_status_view.dart';
@@ -37,10 +39,14 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => ageLocGalvanic());
       case Routes.AGELOC_ME:
         return MaterialPageRoute(builder: (_) => AgeLocMe());
+      case Routes.CUSTOMER_REPORT_ERROR:
+        return MaterialPageRoute(builder: (_) => CustomerError());
       case Routes.ECOSPHERE_WATER_PURIFIER:
         return MaterialPageRoute(builder: (_) => EcosWater());
       case Routes.AGELOC_LUMISPA_ACCENT:
         return MaterialPageRoute(builder: (_) => AgeLocAccent());
+      case Routes.DEVICE_ERROR:
+        return MaterialPageRoute(builder: (_) => DeviceError());
       case Routes.CONTACT_US:
         return MaterialPageRoute(builder: (_) => ContactUs());
       case Routes.HOME:

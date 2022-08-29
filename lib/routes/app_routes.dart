@@ -8,8 +8,7 @@ abstract class Routes {
   static const String AGELOC_BOOST = _Paths.AGELOC_BOOST;
   static const String AGELOC_GALVANIC_SPA = _Paths.AGELOC_GALVANIC_SPA;
   static const String AGELOC_ME = _Paths.AGELOC_ME;
-  static const String ECOSPHERE_WATER_PURIFIER =
-      _Paths.ECOSPHERE_WATER_PURIFIER;
+  static const String ECOSPHERE_WATER_PURIFIER = _Paths.ECOSPHERE_WATER_PURIFIER;
   static const String AGELOC_LUMISPA_ACCENT = _Paths.AGELOC_LUMISPA_ACCENT;
   static const String HOME = _Paths.HOME;
   static const String FREQUENTLY_QUESTION = _Paths.FREQUENTLY_QUESTION;
@@ -19,6 +18,8 @@ abstract class Routes {
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
   static const String CONTACT_US = _Paths.CONTACT_US;
   static const String CONDITION_WARRANTY = _Paths.CONDITION_WARRANTY;
+  static const String CUSTOMER_REPORT_ERROR = _Paths.CUSTOMER_REPORT_ERROR;
+  static const String DEVICE_ERROR = _Paths.DEVICE_ERROR;
 }
 
 abstract class _Paths {
@@ -39,4 +40,6 @@ abstract class _Paths {
   static const String FREQUENTLYQUESTION = '/frequently_questions';
   static const String CONTACT_US = '/contact-us';
   static const String CONDITION_WARRANTY = '/condition-warranty';
+  static const String CUSTOMER_REPORT_ERROR = '/customer-report-error';
+  static const String DEVICE_ERROR = '/device-error-view';
 }

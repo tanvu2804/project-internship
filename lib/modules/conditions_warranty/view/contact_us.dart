@@ -23,7 +23,7 @@ class _ContactUsState extends State<ContactUs> {
             'Contact Us',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Color(0xFF7123D9),
+              color: AppColors.purplePink,
               fontSize: 20.0,
               fontStyle: FontStyle.normal,
               fontWeight: FontWeight.bold,
@@ -33,7 +33,7 @@ class _ContactUsState extends State<ContactUs> {
             padding: EdgeInsets.only(left: 10.0),
             icon: Icon(Icons.chevron_left),
             iconSize: 40.0,
-            color: Color(0xFF7123D9),
+            color: AppColors.purplePink,
             onPressed: () {
               Navigator.of(context).pop();
             },
