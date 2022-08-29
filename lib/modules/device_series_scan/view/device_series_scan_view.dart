@@ -7,6 +7,7 @@ import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_string.dart';
+import '../../../routes/app_routes.dart';
 
 class DeviceSeriesScan extends StatefulWidget {
   const DeviceSeriesScan({Key? key}) : super(key: key);
@@ -29,13 +30,20 @@ class _DeviceSeriesScanState extends State<DeviceSeriesScan> {
     controller!.resumeCamera();
   }
 
+  void _setWarrantyStatus(result) {
+    if (result != null) {
+      Navigator.of(context).pushNamed(Routes.DURATIONS_AVAILABLE);
+    } else
+      Navigator.of(context).pushNamed(Routes.DURATIONS_ERROR_SCAN);
+  }
+
   Widget buildResult() => Container(
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: AppColors.transparent,
         ),
         child: Text(
-          result != null ? 'Result : ${result!.code}' : 'Scan product barcode',
+          result != null ? 'Result : ${result}' : 'Scan product barcode',
           style: TextStyle(
               fontSize: 18,
               color: AppColors.white,
@@ -69,7 +77,8 @@ class _DeviceSeriesScanState extends State<DeviceSeriesScan> {
     });
     controller.scannedDataStream.listen((scanData) {
       setState(() {
-        result = scanData;
+        this.controller?.stopCamera();
+        _setWarrantyStatus(scanData);
       });
     });
   }
@@ -124,7 +133,7 @@ class _DeviceSeriesScanState extends State<DeviceSeriesScan> {
               Positioned(
                 child: buildResult(),
                 top: 20,
-              )
+              ),
             ],
           ),
         ),

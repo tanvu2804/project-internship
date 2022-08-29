@@ -15,7 +15,11 @@ abstract class Routes {
   static const String FREQUENTLY_QUESTION = _Paths.FREQUENTLY_QUESTION;
   static const String DURATIONS = _Paths.DURATIONS;
   static const String DEVICES_SCAN = _Paths.DEVICES_SCAN;
-  static const String DURATIONS_ERROR = _Paths.DURATIONS_ERROR;
+  static const String DURATIONS_AVAILABLE = _Paths.DURATIONS_AVAILABLE;
+  static const String DURATIONS_OUT_OF_WARRANTY =
+      _Paths.DURATIONS_OUT_OF_WARRANTY;
+  static const String DURATIONS_LACK_INFOR = _Paths.DURATIONS_LACK_INFOR;
+  static const String DURATIONS_ERROR_SCAN = _Paths.DURATIONS_ERROR_SCAN;
   static const String FREQUENTLYQUESTION = _Paths.FREQUENTLYQUESTION;
   static const String CONTACT_US = _Paths.CONTACT_US;
   static const String CONDITION_WARRANTY = _Paths.CONDITION_WARRANTY;
@@ -35,7 +39,14 @@ abstract class _Paths {
   static const String FREQUENTLY_QUESTION = '/frequently_questions';
   static const String DURATIONS = '/durations_warranty';
   static const String DEVICES_SCAN = '/device_series_scan';
-  static const String DURATIONS_ERROR = '/durations_warranty_error';
+  static const String DURATIONS_AVAILABLE =
+      '/durations_warranty_status/view/durations_warranty_available.dart';
+  static const String DURATIONS_OUT_OF_WARRANTY =
+      '/durations_warranty_status/view/durations_out_of_warranty.dart.dart';
+  static const String DURATIONS_LACK_INFOR =
+      '/durations_warranty_status/view/durations_lack_information.dart.dart';
+  static const String DURATIONS_ERROR_SCAN =
+      '/durations_warranty_status/view/durations_error_scan.dart';
   static const String FREQUENTLYQUESTION = '/frequently_questions';
   static const String CONTACT_US = '/contact-us';
   static const String CONDITION_WARRANTY = '/condition-warranty';
