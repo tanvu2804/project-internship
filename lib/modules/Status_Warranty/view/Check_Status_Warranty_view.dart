@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_internship/constants/app_colors.dart';
 import 'package:project_internship/constants/app_string.dart';
+import 'package:project_internship/modules/Status_Warranty/view/Filter_Device_view.dart';
 
 class Status_Warranty_View extends StatefulWidget {
   const Status_Warranty_View({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
   var GetData;
   late String Serial;
   late String Reference;
+  var submit;
 
   late var _FormKey = GlobalKey<FormState>();
   // File data = new File();
@@ -155,8 +157,15 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
                     ),
                   ),
                 ),
-                onTap: () {
-                  print('a');
+                onTap: () async {
+                  var submit = await Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Filter_Device()));
+                  setState(() {
+                    this.submit = submit;
+                    print("aaaaaaaaaaa");
+                    print(submit);
+                    print(submit["1"]);
+                  });
                 },
               ),
               Container(
@@ -642,7 +651,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
 
   Widget Fill_In_Table_serries(int index) {
     return Padding(
-      padding: EdgeInsets.only(left: 40, right: 35),
+      padding: EdgeInsets.only(left: 10, right: 5),
       child: SizedBox(
           child: Text(
             (GetData[0]["data"][index]["serries"]),
@@ -658,7 +667,7 @@ class _Status_Warranty_ViewState extends State<Status_Warranty_View> {
 
   Widget Fill_In_Table_device(int index) {
     return Padding(
-      padding: EdgeInsets.only(left: 15, right: 35),
+      padding: EdgeInsets.only(left: 15, right: 5),
       child: SizedBox(
           child: Text(
             (GetData[0]["data"][index]["product"]),

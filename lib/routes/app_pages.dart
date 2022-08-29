@@ -12,7 +12,7 @@ class AppRouter {
   Route? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case "/":
-        return MaterialPageRoute(builder: (_) => Filter_Device());
+        return MaterialPageRoute(builder: (_) => Status_Warranty_View());
       case Routes.LOGIN:
         return MaterialPageRoute(builder: (_) => Login());
       case Routes.SIGN_UP:

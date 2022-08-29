@@ -9,6 +9,15 @@ class Filter_Device extends StatefulWidget {
 }
 
 class _Filter_DeviceState extends State<Filter_Device> {
+  TextEditingController controller = new TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,189 +29,194 @@ class _Filter_DeviceState extends State<Filter_Device> {
           icon: Image.asset(
             AppImages.ic_times,
             color: Color(0xffB23AB3),
-            height: 28,
-            width: 46,
+            height: 20,
+            width: 20,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text(
           'Filter device list',
           style: TextStyle(
             color: Color(0xffB23AB3),
             fontWeight: FontWeight.w500,
-            fontSize: 40,
+            fontSize: 20,
           ),
         ),
         centerTitle: true,
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            TextFormField(
-              onTap: () {},
-              decoration: InputDecoration(
-                hintText: "Search device with series number",
-                hintStyle: TextStyle(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              TextFormField(
+                controller: controller,
+                onTap: () {},
+                decoration: InputDecoration(
+                  hintText: "Search device with series number",
+                  hintStyle: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.zero,
+                    borderSide: BorderSide(
+                      color: Color(0xff858585),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.zero,
+                    borderSide: BorderSide(
+                      color: Color(0xff858585),
+                    ),
+                  ),
+                ),
+                style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
+                  color: Color(0xff858585),
                 ),
-                enabledBorder: OutlineInputBorder(
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                  top: 16,
+                ),
+                child: Container(
+                  // color: Colors.red,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Group device",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff858585),
+                        ),
+                        // textAlign: TextAlign.start,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Ecosphere_Radio_Widget(),
+                  Galvanic_Body_Widget(),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  LumiSpa_Radio_Widget(),
+                  AgelocMe_Radio_Widget(),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  AgelocBoost_Radio_Widget(),
+                  OtherDevice_Radio_Widget(),
+                ],
+              ),
+              GalvanicSpa_Radio_Widget(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                  top: 16,
+                ),
+                child: Container(
+                  // color: Colors.red,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Receiving office",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff858585),
+                        ),
+                        // textAlign: TextAlign.start,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Loremipsum_Radio_Widget(),
+              Loremipsum_Radio_Widget1(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                  top: 16,
+                ),
+                child: Container(
+                  // color: Colors.red,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Warranty Status",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff858585),
+                        ),
+                        // textAlign: TextAlign.start,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  // color: Colors.red,
                   borderRadius: BorderRadius.zero,
-                  borderSide: BorderSide(
-                    color: Color(0xff858585),
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.zero,
-                  borderSide: BorderSide(
-                    color: Color(0xff858585),
-                  ),
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Color(0xff858585),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
-                right: 16,
-                top: 16,
-              ),
-              child: Container(
-                // color: Colors.red,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Group device",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff858585),
-                      ),
-                      // textAlign: TextAlign.start,
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Color(0xff858585),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Ecosphere_Radio_Widget(),
-                Galvanic_Body_Widget(),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                LumiSpa_Radio_Widget(),
-                AgelocMe_Radio_Widget(),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                AgelocBoost_Radio_Widget(),
-                OtherDevice_Radio_Widget(),
-              ],
-            ),
-            GalvanicSpa_Radio_Widget(),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
-                right: 16,
-                top: 16,
-              ),
-              child: Container(
-                // color: Colors.red,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Receiving office",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff858585),
-                      ),
-                      // textAlign: TextAlign.start,
+                    top: BorderSide(
+                      color: Color(0xff858585),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Loremipsum_Radio_Widget(),
-            Loremipsum_Radio_Widget1(),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
-                right: 16,
-                top: 16,
-              ),
-              child: Container(
-                // color: Colors.red,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Warranty Status",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff858585),
-                      ),
-                      // textAlign: TextAlign.start,
+                    right: BorderSide(
+                      color: Color(0xff858585),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                // color: Colors.red,
-                borderRadius: BorderRadius.zero,
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xff858585),
-                  ),
-                  top: BorderSide(
-                    color: Color(0xff858585),
-                  ),
-                  right: BorderSide(
-                    color: Color(0xff858585),
-                  ),
-                  left: BorderSide(
-                    color: Color(0xff858585),
+                    left: BorderSide(
+                      color: Color(0xff858585),
+                    ),
                   ),
                 ),
-              ),
-              child: InkWell(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.keyboard_arrow_down),
-                      color: Color(0xff333333),
-                      onPressed: () {},
-                    )
-                  ],
+                child: InkWell(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.keyboard_arrow_down),
+                        color: Color(0xff333333),
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    print('a');
+                  },
                 ),
-                onTap: () {
-                  print('a');
-                },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: Padding(
@@ -225,7 +239,9 @@ class _Filter_DeviceState extends State<Filter_Device> {
             ),
           ),
           onTap: () {
-            print('b');
+            var sunmit = {"1": controller.text, "2": "ghdjwfujk"};
+
+            Navigator.pop(context, sunmit);
           },
         ),
       ),
