@@ -17,11 +17,12 @@ class _AgeLocAccentState extends State<AgeLocAccent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent.withOpacity(0.0),
         elevation: 0,
         title: Text('Conditions Warranty'),
         titleTextStyle: TextStyle(
-          color: Color(0xFF7123D9),
+          color: AppColors.purplePink,
           fontSize: 20.0,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.bold,
@@ -30,7 +31,7 @@ class _AgeLocAccentState extends State<AgeLocAccent> {
           padding: EdgeInsets.only(left: 10.0),
           icon: Icon(Icons.chevron_left),
           iconSize: 40.0,
-          color: Color(0xFF7123D9),
+          color: AppColors.purplePink,
           onPressed: () {
             Navigator.of(context).pop();
           },

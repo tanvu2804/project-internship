@@ -35,5 +35,11 @@ class AppImages {
 
   //other
   static final String privacy = 'assets/images/others/privacy.png';
-
+  static final String ecosphere = 'assets/images/others/ecosphere.png';
+  static final String lumi = 'assets/images/others/lumispa.png';
+  static final String agelocboost = 'assets/images/others/agelocboost.png';
+  static final String galvanicspa = 'assets/images/others/galvanicspa.png';
+  static final String galvanicbody = 'assets/images/others/galvanicbody.png';
+  static final String agelocme = 'assets/images/others/agelocme.png';
+  static final String otherdevice = 'assets/images/others/otherdevice.png';
 }

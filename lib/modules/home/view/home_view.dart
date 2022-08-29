@@ -215,7 +215,9 @@ class _HomeState extends State<Home> {
                         style: TextStyle(color: AppColors.white, fontSize: 24),
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(Routes.CUSTOMER_REPORT_ERROR);
+                    },
                   ),
                 ),
               ],
